@@ -4,14 +4,14 @@ title: add_arctic_ease2n_regions_v090.json
 categories: setup_processes
 excerpt:  Add global arctic regions in EASE-grid 6931 to the db
 tags:: 
-    - add_arctic_ease2n_regions
-date: 2021-11-08
-modified: 2021-11-08
+    - json/add_arctic_ease2n_regions
+date: 2021-12-03
+modified: 2021-12-03
 comments: true
 share: true
 ---
 
-# add arctic ease2n regions (setup_processes)
+# json/add arctic ease2n regions (setup_processes)
 
 ###  Add global arctic regions in EASE-grid 6931 to the db
 

@@ -4,14 +4,14 @@ title: add_default_regions_from-vector_v090.json
 categories: setup_processes
 excerpt:  Add countries, subregions and continents to the db
 tags:: 
-    - add_default_regions_from-vector
-date: 2021-11-08
-modified: 2021-11-08
+    - json/add_default_regions_from-vector
+date: 2021-12-03
+modified: 2021-12-03
 comments: true
 share: true
 ---
 
-# add default regions from vector (setup_processes)
+# json/add default regions from vector (setup_processes)
 
 ###  Add countries, subregions and continents to the db
 
@@ -51,12 +51,54 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
       },
       "srcpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
-
+        "hdr": "shp"
       },
       "dstpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
+      },
+      "srccomp": [
+        {
+          "land": {
+            "source": "karttur",
+            "product": "karttur",
+            "content": "defaultregions",
+            "layerid": "land",
+            "prefix": "land",
+            "suffix": "tol@1km",
+            "volume": "DEMDATA",
+            "ext": "shp"
+          }
+        }
+      ],
+      "dstcopy": [
+        {
+          "land": {
+            "layerid": "land"
+          }
+        }
+      ]
+    },
+    {
+      "processid": "DefaultRegionFromVector",
+      "parameters": {
+        "vector_db_id": "NAME",
+        "vector_db_name": "NAME",
+        "vector_db_category": "CATEGORY",
+        "vector_db_parentid": "PARENTNAME",
+        "vector_db_parentcat": "PARENTCAT",
+        "vector_db_stratum": "STRATUM",
+        "version": "kt1",
+        "vector_db_title": "NAME",
+        "vector_db_label": "CATEGORY"
+      },
+      "srcpath": {
+        "volume": "DEMDATA",
+        "hdr": "shp"
+      },
+      "dstpath": {
+        "volume": "DEMDATA",
+        "hdr": "shp"
       },
       "srccomp": [
         {
@@ -66,7 +108,7 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
             "content": "defaultregions",
             "layerid": "continents",
             "prefix": "continents",
-            "suffix": "0",
+            "suffix": "tol@1km",
             "volume": "DEMDATA",
             "ext": "shp"
           }
@@ -95,11 +137,11 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
       },
       "srcpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "dstpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "srccomp": [
         {
@@ -109,7 +151,7 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
             "content": "defaultregions",
             "layerid": "continent-subregions",
             "prefix": "continent-subregions",
-            "suffix": "0"
+            "suffix": "tol@1km"
           }
         }
       ],
@@ -136,11 +178,11 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
       },
       "srcpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "dstpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "srccomp": [
         {
@@ -150,7 +192,7 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
             "content": "defaultregions",
             "layerid": "country",
             "prefix": "country",
-            "suffix": "0"
+            "suffix": "tol@100m"
           }
         }
       ],
@@ -177,11 +219,11 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
       },
       "srcpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "dstpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "srccomp": [
         {
@@ -191,7 +233,7 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
             "content": "defaultregions",
             "layerid": "country-continent",
             "prefix": "country-continent",
-            "suffix": "0"
+            "suffix": "tol@100m"
           }
         }
       ],
@@ -206,7 +248,7 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
     {
       "processid": "DefaultRegionFromVector",
       "parameters": {
-        "vector_db_id": "NAME",
+        "vector_db_id": "CODE",
         "vector_db_name": "NAME",
         "vector_db_category": "CATEGORY",
         "vector_db_parentid": "PARENTNAME",
@@ -218,11 +260,11 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
       },
       "srcpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "dstpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "srccomp": [
         {
@@ -247,7 +289,7 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
     {
       "processid": "DefaultRegionFromVector",
       "parameters": {
-        "vector_db_id": "NAME",
+        "vector_db_id": "CODE",
         "vector_db_name": "NAME",
         "vector_db_category": "CATEGORY",
         "vector_db_parentid": "PARENTNAME",
@@ -259,11 +301,11 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
       },
       "srcpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "dstpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "srccomp": [
         {
@@ -300,11 +342,11 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
       },
       "srcpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "dstpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "srccomp": [
         {
@@ -341,11 +383,11 @@ The json command file <span class='file'>add_default_regions_from-vector_v090.js
       },
       "srcpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "dstpath": {
         "volume": "DEMDATA",
-        "hdr":"shp"
+        "hdr": "shp"
       },
       "srccomp": [
         {

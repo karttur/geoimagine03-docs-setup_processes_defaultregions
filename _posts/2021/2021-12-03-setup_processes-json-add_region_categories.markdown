@@ -4,14 +4,14 @@ title: add_region_categories_v090.json
 categories: setup_processes
 excerpt:  Add region categories to the db
 tags:: 
-    - add_region_categories
-date: 2021-11-08
-modified: 2021-11-08
+    - json/add_region_categories
+date: 2021-12-03
+modified: 2021-12-03
 comments: true
 share: true
 ---
 
-# add region categories (setup_processes)
+# json/add region categories (setup_processes)
 
 ###  Add region categories to the db
 

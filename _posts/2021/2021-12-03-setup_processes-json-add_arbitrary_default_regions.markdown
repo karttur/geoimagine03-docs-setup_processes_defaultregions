@@ -4,14 +4,14 @@ title: add_arbitrary_default_regions_v090.json
 categories: setup_processes
 excerpt:  Add global default regions to the db
 tags:: 
-    - add_arbitrary_default_regions
-date: 2021-11-08
-modified: 2021-11-08
+    - json/add_arbitrary_default_regions
+date: 2021-12-03
+modified: 2021-12-03
 comments: true
 share: true
 ---
 
-# add arbitrary default regions (setup_processes)
+# json/add arbitrary default regions (setup_processes)
 
 ###  Add global default regions to the db
 

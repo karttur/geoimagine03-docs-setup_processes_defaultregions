@@ -2,18 +2,18 @@
 layout: article
 title: add_ease2n_hydro_regions_v090.json
 categories: setup_processes
-excerpt:   Add hydrological basin regions for ease2n
+excerpt:   Add Arctic hydrological basin regions for ease2n
 tags:: 
-    - add_ease2n_hydro_regions
-date: 2021-11-08
-modified: 2021-11-08
+    - json/add_ease2n_hydro_regions
+date: 2021-12-03
+modified: 2021-12-03
 comments: true
 share: true
 ---
 
-# add ease2n hydro regions (setup_processes)
+# json/add ease2n hydro regions (setup_processes)
 
-###   Add hydrological basin regions for ease2n
+###   Add Arctic hydrological basin regions for ease2n
 
 The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</span> is part of karttur's GeoImagine project <span class='project'>setup_processes</span>. Calling the json file will execute the following commands of the GeoImagine Framework.
 
@@ -33,9 +33,9 @@ The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</spa
    "process": [
       {
          "processid": "DefaultRegionFromCoords",
-         "overwrite": true,
+         "overwrite": false,
          "parameters": {
-            "regioncat": "global",
+            "regioncat": "basin",
             "regionid": "nordichydro_ease2n",
             "regionname": "nordichydro_ease2n hydro ease2n",
             "parentcat": "global",
@@ -72,9 +72,9 @@ The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</spa
       },
       {
          "processid": "DefaultRegionFromCoords",
-         "overwrite": true,
+         "overwrite": false,
          "parameters": {
-            "regioncat": "global",
+            "regioncat": "basin",
             "regionid": "greenlandhydro_ease2n",
             "regionname": "greenlandhydro_ease2n hydro ease2n",
             "parentcat": "global",
@@ -111,9 +111,9 @@ The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</spa
       },
       {
          "processid": "DefaultRegionFromCoords",
-         "overwrite": true,
+         "overwrite": false,
          "parameters": {
-            "regioncat": "global",
+            "regioncat": "basin",
             "regionid": "cahydro_ease2n",
             "regionname": "cahydro_ease2n hydro ease2n",
             "parentcat": "global",
@@ -150,9 +150,9 @@ The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</spa
       },
       {
          "processid": "DefaultRegionFromCoords",
-         "overwrite": true,
+         "overwrite": false,
          "parameters": {
-            "regioncat": "global",
+            "regioncat": "basin",
             "regionid": "alaskahydro_ease2n",
             "regionname": "alaskahydro_ease2n hydro ease2n",
             "parentcat": "global",
@@ -189,9 +189,9 @@ The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</spa
       },
       {
          "processid": "DefaultRegionFromCoords",
-         "overwrite": true,
+         "overwrite": false,
          "parameters": {
-            "regioncat": "global",
+            "regioncat": "basin",
             "regionid": "kolymahydro_ease2n",
             "regionname": "kolymahydro_ease2n hydro ease2n",
             "parentcat": "global",
@@ -228,9 +228,9 @@ The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</spa
       },
       {
          "processid": "DefaultRegionFromCoords",
-         "overwrite": true,
+         "overwrite": false,
          "parameters": {
-            "regioncat": "global",
+            "regioncat": "basin",
             "regionid": "lenahydro_ease2n",
             "regionname": "lenahydro_ease2n hydro ease2n",
             "parentcat": "global",
@@ -267,9 +267,9 @@ The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</spa
       },
       {
          "processid": "DefaultRegionFromCoords",
-         "overwrite": true,
+         "overwrite": false,
          "parameters": {
-            "regioncat": "global",
+            "regioncat": "basin",
             "regionid": "yieniseyhydro_ease2n",
             "regionname": "yieniseyhydro_ease2n hydro ease2n",
             "parentcat": "global",
@@ -306,9 +306,9 @@ The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</spa
       },
       {
          "processid": "DefaultRegionFromCoords",
-         "overwrite": true,
+         "overwrite": false,
          "parameters": {
-            "regioncat": "global",
+            "regioncat": "basin",
             "regionid": "obhydro_ease2n",
             "regionname": "obhydro_ease2n hydro ease2n",
             "parentcat": "global",
@@ -345,9 +345,9 @@ The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</spa
       },
       {
          "processid": "DefaultRegionFromCoords",
-         "overwrite": true,
+         "overwrite": false,
          "parameters": {
-            "regioncat": "global",
+            "regioncat": "basin",
             "regionid": "dvinahydro_ease2n",
             "regionname": "dvinahydro_ease2n hydro ease2n",
             "parentcat": "global",
@@ -384,9 +384,9 @@ The json command file <span class='file'>add_ease2n_hydro_regions_v090.json</spa
       },
       {
          "processid": "DefaultRegionFromCoords",
-         "overwrite": true,
+         "overwrite": false,
          "parameters": {
-            "regioncat": "global",
+            "regioncat": "basin",
             "regionid": "arcticoceanhydro_ease2n",
             "regionname": "arcticoceanhydro_ease2n hydro ease2n",
             "parentcat": "global",

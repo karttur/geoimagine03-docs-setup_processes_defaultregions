@@ -2,18 +2,18 @@
 layout: article
 title: ancillary-import-kartturROI_2014_v090.json
 categories: setup_processes
-excerpt:  Import global countries as ancillary data
+excerpt:  Import global countries and continents as ancillary data
 tags:: 
-    - ancillary-import-kartturROI_2014
-date: 2021-11-08
-modified: 2021-11-08
+    - json/ancillary-import-kartturROI_2014
+date: 2021-12-03
+modified: 2021-12-03
 comments: true
 share: true
 ---
 
-# ancillary import kartturROI 2014 (setup_processes)
+# json/ancillary import kartturROI 2014 (setup_processes)
 
-###  Import global countries as ancillary data
+###  Import global countries and continents as ancillary data
 
 The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.json</span> is part of karttur's GeoImagine project <span class='project'>setup_processes</span>. Calling the json file will execute the following commands of the GeoImagine Framework.
 
@@ -65,8 +65,8 @@ The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.j
         {
           "country": {
             "datadir": "data/political",
-            "datafile": "countries_karttur_global_2014",
-            "datalayer": "countries",
+            "datafile": "country_karttur_global_2014_tol@100m",
+            "datalayer": "country",
             "title": "Global countries (with iso-codes)",
             "label": "Cleaned vectors from ShareGeo representing global countries for 2014"
           }
@@ -74,8 +74,8 @@ The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.j
         {
           "country-continent": {
             "datadir": "data/political",
-            "datafile": "countries-continents_karttur_global_2014",
-            "datalayer": "countries-continents",
+            "datafile": "country-continent_karttur_global_2014_tol@100m",
+            "datalayer": "country-continent",
             "title": "Global countries (with iso-codes)",
             "label": "Cleaned vectors from ShareGeo representing global countries for 2014"
           }
@@ -83,7 +83,7 @@ The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.j
         {
           "continent-subregions": {
             "datadir": "data/political",
-            "datafile": "continent-subregions_karttur_global_2014",
+            "datafile": "continent-subregions_karttur_global_2014_tol@1km",
             "datalayer": "continent-subregions",
             "title": "Global countries (with iso-codes)",
             "label": "Cleaned vectors from ShareGeo representing global countries for 2014"
@@ -92,16 +92,25 @@ The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.j
         {
           "continents": {
             "datadir": "data/political",
-            "datafile": "continents_karttur_global_2014",
+            "datafile": "continents_karttur_global_2014_tol@1km",
             "datalayer": "continents",
             "title": "Global countries (with iso-codes)",
             "label": "Cleaned vectors from ShareGeo representing global countries for 2014"
           }
         },
         {
+          "land": {
+            "datadir": "data/political",
+            "datafile": "land_karttur_global_2014_tol@1km",
+            "datalayer": "land",
+            "title": "Global landsmass",
+            "label": "Cleaned vectors from ShareGeo representing global countries for 2014"
+          }
+        },
+        {
           "marine-countries": {
             "datadir": "data/political",
-            "datafile": "marine-countries_karttur_2014",
+            "datafile": "marine-countries_karttur_2014_0",
             "datalayer": "marine-countries",
             "title": "Global countries (with iso-codes)",
             "label": "Cleaned vectors from ShareGeo representing global countries for 2014"
@@ -110,7 +119,7 @@ The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.j
         {
           "marine-continent-countries": {
             "datadir": "data/political",
-            "datafile": "marine-continent-countries_karttur_2014",
+            "datafile": "marine-continent-countries_karttur_2014_0",
             "datalayer": "marine-continent-countries",
             "title": "Global countries (with iso-codes)",
             "label": "Cleaned vectors from ShareGeo representing global countries for 2014"
@@ -119,7 +128,7 @@ The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.j
         {
           "marine-continent-subregions": {
             "datadir": "data/political",
-            "datafile": "marine-continent-subregions_karttur_2014",
+            "datafile": "marine-continent-subregions_karttur_2014_0",
             "datalayer": "marine-continent-subregions",
             "title": "Global countries (with iso-codes)",
             "label": "Cleaned vectors from ShareGeo representing global countries for 2014"
@@ -128,7 +137,7 @@ The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.j
         {
           "marine-continents": {
             "datadir": "data/political",
-            "datafile": "marine-continents_karttur_2014",
+            "datafile": "marine-continents_karttur_2014_0",
             "datalayer": "marine-continents",
             "title": "Global countries (with iso-codes)",
             "label": "Cleaned vectors from ShareGeo representing global countries for 2014"
@@ -160,7 +169,7 @@ The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.j
             "content": "defaultregions",
             "layerid": "country-continent",
             "prefix": "country-continent",
-            "suffix": "0",
+            "suffix": "tol@100m",
             "dataunit": "boundary",
             "celltype": "vector",
             "cellnull": "-32768"
@@ -175,7 +184,7 @@ The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.j
             "content": "defaultregions",
             "layerid": "continent-subregions",
             "prefix": "continent-subregions",
-            "suffix": "0",
+            "suffix": "tol@1km",
             "dataunit": "boundary",
             "celltype": "vector",
             "cellnull": "-32768"
@@ -190,7 +199,21 @@ The json command file <span class='file'>ancillary-import-kartturROI_2014_v090.j
             "content": "defaultregions",
             "layerid": "continents",
             "prefix": "continents",
-            "suffix": "0",
+            "suffix": "tol@1km",
+            "dataunit": "boundary",
+            "celltype": "vector",
+            "cellnull": "-32768"
+          }
+        },{
+          "land": {
+            "masked": "Y",
+            "measure": "N",
+            "source": "karttur",
+            "product": "karttur",
+            "content": "defaultregions",
+            "layerid": "land",
+            "prefix": "land",
+            "suffix": "tol@1km",
             "dataunit": "boundary",
             "celltype": "vector",
             "cellnull": "-32768"
